@@ -49,14 +49,15 @@ public class Biblioteca {
 			try {
 				
 				l = new Libro(userTitolo, userPagine, userAutore, userEditore);
+				libri[i] = l;
 				
 			} catch (Exception e) {
-				
+				i--;
 				System.out.println("errore " + e.getMessage());
 				
 			}
 			
-			libri[i] = l;
+			
 			
 			
 		}
