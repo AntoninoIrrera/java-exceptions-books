@@ -64,12 +64,12 @@ public class Biblioteca {
 		sc.close();
 		
 		try {
-            FileWriter writer = new FileWriter("C:\\Users\\irrer\\MyFile.txt");
+            FileWriter writer = new FileWriter("C:\\Users\\irrer\\Libri.txt");
             writer.write("");
     
             writer.close();
         } catch (IOException e) {
-            e.printStackTrace();
+        	System.err.println("Errore nella lettura di Libri.txt\n" + e.getMessage());
         }
 		
 		for (int i = 0; i < libri.length; i++) {
@@ -77,19 +77,19 @@ public class Biblioteca {
 //			System.out.println(libri[i] + "\n");
 		
 			try {
-	            FileWriter writer = new FileWriter("C:\\Users\\irrer\\MyFile.txt", true);
+	            FileWriter writer = new FileWriter("C:\\Users\\irrer\\Libri.txt", true);
 	            writer.write(libri[i].toString() + "\n");
 	    
 	            writer.close();
 	        } catch (IOException e) {
-	            e.printStackTrace();
+	        	System.err.println("Errore nella lettura di Libri.txt\n" + e.getMessage());
 	        }
 		
 		}
 		
 		
 		 try {
-	            FileReader reader = new FileReader("C:\\\\Users\\\\irrer\\\\MyFile.txt");
+	            FileReader reader = new FileReader("C:\\Users\\irrer\\Libri.txt");
 	            int character;
 	 
 	            while ((character = reader.read()) != -1) {
@@ -98,7 +98,7 @@ public class Biblioteca {
 	            reader.close();
 	 
 	        } catch (IOException e) {
-	            e.printStackTrace();
+	        	System.err.println("Errore nella lettura di Libri.txt\n" + e.getMessage());
 	        }
 	}
 }
